@@ -1,0 +1,382 @@
+Analysis & Synthesis report for TpIntegrador
+Tue Jul 29 16:46:46 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 16:46:46 2025      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; TpIntegrador                               ;
+; Top-level Entity Name              ; TpIntegrador                               ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 88                                         ;
+;     Total combinational functions  ; 52                                         ;
+;     Dedicated logic registers      ; 49                                         ;
+; Total registers                    ; 49                                         ;
+; Total pins                         ; 25                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; TpIntegrador       ; TpIntegrador       ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
+; reg_inicial.bdf                  ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/reg_inicial.bdf          ;         ;
+; mux2.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/mux2.bdf                 ;         ;
+; reg_contador.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/reg_contador.bdf         ;         ;
+; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/FullAdder.bdf            ;         ;
+; sumador12bits.bdf                ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/sumador12bits.bdf        ;         ;
+; sumador_restador.bdf             ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/sumador_restador.bdf     ;         ;
+; comparador_igualdad.bdf          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/comparador_igualdad.bdf  ;         ;
+; comparador4bits.bdf              ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/comparador4bits.bdf      ;         ;
+; comparador12bits.bdf             ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/comparador12bits.bdf     ;         ;
+; detectorFlancoSubida.bdf         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/detectorFlancoSubida.bdf ;         ;
+; TpIntegrador.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/TpIntegrador.bdf         ;         ;
+; tristate_12bits.bdf              ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Usuario/Desktop/IDL/Integrador/tristate_12bits.bdf      ;         ;
+; reg_final.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/IDL/Integrador/reg_final.bdf            ;         ;
+; xor3.bdf                         ; yes             ; Megafunction                             ; d:/altera/quartus/libraries/others/maxplus2/xor3.bdf             ;         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 25               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; CLOCK~input      ;
+; Maximum fan-out          ; 37               ;
+; Total fan-out            ; 390              ;
+; Average fan-out          ; 2.39             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; |TpIntegrador                    ; 52 (3)            ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 25   ; 0            ; |TpIntegrador                                                                         ; work         ;
+;    |comparador12bits:inst1|      ; 21 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|comparador12bits:inst1                                                  ; work         ;
+;       |comparador4bits:inst1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|comparador12bits:inst1|comparador4bits:inst1                            ; work         ;
+;    |comparador_igualdad:inst9|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|comparador_igualdad:inst9                                               ; work         ;
+;    |detectorFlancoSubida:inst21| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|detectorFlancoSubida:inst21                                             ; work         ;
+;    |reg_contador:inst3|          ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|reg_contador:inst3                                                      ; work         ;
+;    |reg_final:inst28|            ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|reg_final:inst28                                                        ; work         ;
+;    |reg_final:inst|              ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|reg_final:inst                                                          ; work         ;
+;    |reg_inicial:inst2|           ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|reg_inicial:inst2                                                       ; work         ;
+;    |sumador_restador:inst4|      ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4                                                  ; work         ;
+;       |sumador12bits:inst13|     ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13                             ; work         ;
+;          |FullAdder:inst10|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst10            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst10|xor3:inst4 ; work         ;
+;          |FullAdder:inst11|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst11            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst11|xor3:inst4 ; work         ;
+;          |FullAdder:inst12|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst12            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst12|xor3:inst4 ; work         ;
+;          |FullAdder:inst13|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst13            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst13|xor3:inst4 ; work         ;
+;          |FullAdder:inst14|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst14            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst14|xor3:inst4 ; work         ;
+;          |FullAdder:inst15|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst15            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst15|xor3:inst4 ; work         ;
+;          |FullAdder:inst16|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst16            ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst16|xor3:inst4 ; work         ;
+;          |FullAdder:inst17|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17            ; work         ;
+;             |xor3:inst4|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17|xor3:inst4 ; work         ;
+;          |FullAdder:inst7|       ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst7             ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst7|xor3:inst4  ; work         ;
+;          |FullAdder:inst8|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst8             ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst8|xor3:inst4  ; work         ;
+;          |FullAdder:inst9|       ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst9             ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst9|xor3:inst4  ; work         ;
+;          |FullAdder:inst|        ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst              ; work         ;
+;             |xor3:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst|xor3:inst4   ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Jul 29 16:46:43 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TpIntegrador -c TpIntegrador
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file reg_inicial.bdf
+    Info (12023): Found entity 1: reg_inicial
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.bdf
+    Info (12023): Found entity 1: mux2
+Info (12021): Found 1 design units, including 1 entities, in source file reg_contador.bdf
+    Info (12023): Found entity 1: reg_contador
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file sumador12bits.bdf
+    Info (12023): Found entity 1: sumador12bits
+Warning (12019): Can't analyze file -- file sumador-restador.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file sumador_restador.bdf
+    Info (12023): Found entity 1: sumador_restador
+Info (12021): Found 1 design units, including 1 entities, in source file comparador_igualdad.bdf
+    Info (12023): Found entity 1: comparador_igualdad
+Info (12021): Found 1 design units, including 1 entities, in source file prueba.bdf
+    Info (12023): Found entity 1: prueba
+Info (12021): Found 1 design units, including 1 entities, in source file comparador4bits.bdf
+    Info (12023): Found entity 1: comparador4bits
+Info (12021): Found 1 design units, including 1 entities, in source file comparador12bits.bdf
+    Info (12023): Found entity 1: comparador12bits
+Warning (12019): Can't analyze file -- file simulaciones/detectorFlancoSubida.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file detectorflancosubida.bdf
+    Info (12023): Found entity 1: detectorFlancoSubida
+Info (12021): Found 1 design units, including 1 entities, in source file tpintegrador.bdf
+    Info (12023): Found entity 1: TpIntegrador
+Info (12021): Found 1 design units, including 1 entities, in source file tristate_12bits.bdf
+    Info (12023): Found entity 1: tristate_12bits
+Info (12127): Elaborating entity "TpIntegrador" for the top level hierarchy
+Warning (275009): Pin "CONTINUAR" not connected
+Warning (275009): Pin "RECARGAR" not connected
+Warning (275009): Pin "START" not connected
+Info (12128): Elaborating entity "comparador12bits" for hierarchy "comparador12bits:inst1"
+Info (12128): Elaborating entity "comparador4bits" for hierarchy "comparador12bits:inst1|comparador4bits:inst"
+Info (12128): Elaborating entity "reg_inicial" for hierarchy "reg_inicial:inst2"
+Warning (275008): Primitive "VCC" of instance "inst7" not used
+Info (12128): Elaborating entity "mux2" for hierarchy "reg_inicial:inst2|mux2:inst16"
+Warning (12125): Using design file reg_final.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: reg_final
+Info (12128): Elaborating entity "reg_final" for hierarchy "reg_final:inst"
+Warning (275008): Primitive "VCC" of instance "inst7" not used
+Info (12128): Elaborating entity "detectorFlancoSubida" for hierarchy "detectorFlancoSubida:inst21"
+Info (12128): Elaborating entity "comparador_igualdad" for hierarchy "comparador_igualdad:inst9"
+Info (12128): Elaborating entity "reg_contador" for hierarchy "reg_contador:inst3"
+Info (12128): Elaborating entity "sumador_restador" for hierarchy "sumador_restador:inst4"
+Info (12128): Elaborating entity "sumador12bits" for hierarchy "sumador_restador:inst4|sumador12bits:inst13"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17"
+Info (12128): Elaborating entity "XOR3" for hierarchy "sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17|XOR3:inst4"
+Info (12130): Elaborated megafunction instantiation "sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17|XOR3:inst4"
+Info (12128): Elaborating entity "tristate_12bits" for hierarchy "tristate_12bits:inst29"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[11]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[10]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[9]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[8]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[7]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[6]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[5]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "DATA[0]" and its non-tri-state driver.
+Info (13060): One or more bidirs are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[11]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[10]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[9]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[8]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[7]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[6]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[5]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[4]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[3]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[2]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[1]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "DATA[0]" is moved to its source
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+    Warning (13010): Node "DATA~synth"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CONTINUAR"
+    Warning (15610): No output dependent on input pin "RECARGAR"
+    Warning (15610): No output dependent on input pin "START"
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21060): Implemented 12 bidirectional pins
+    Info (21061): Implemented 88 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Tue Jul 29 16:46:46 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
