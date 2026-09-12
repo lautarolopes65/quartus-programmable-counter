@@ -1,0 +1,1170 @@
+|TpIntegrador
+ERROR <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+UP_DOWN => inst15.IN0
+UP_DOWN => inst14.IN0
+UP_DOWN => sumador_restador:inst4.UP_DOWN
+CLOCK => reg_inicial:inst2.CLOCK
+CLOCK => reg_final:inst.CLOCK
+CLOCK => reg_contador:inst3.CLOCK
+CLOCK => detectorFlancoSubida:inst21.CLOCK
+LOAD_I => reg_inicial:inst2.LOAD_I
+LOAD_I => reg_contador:inst3.LOAD_I
+LOAD_I => inst26.IN0
+DATA[0] <> reg_final:inst28.Q[0]
+DATA[1] <> reg_final:inst28.Q[1]
+DATA[2] <> reg_final:inst28.Q[2]
+DATA[3] <> reg_final:inst28.Q[3]
+DATA[4] <> reg_final:inst28.Q[4]
+DATA[5] <> reg_final:inst28.Q[5]
+DATA[6] <> reg_final:inst28.Q[6]
+DATA[7] <> reg_final:inst28.Q[7]
+DATA[8] <> reg_final:inst28.Q[8]
+DATA[9] <> reg_final:inst28.Q[9]
+DATA[10] <> reg_final:inst28.Q[10]
+DATA[11] <> reg_final:inst28.Q[11]
+LOAD_F => reg_final:inst.LOAD_F
+LOAD_F => inst27.IN0
+FIN <= detectorFlancoSubida:inst21.S
+b[0] => sumador_restador:inst4.b[0]
+b[0] => inst8.IN0
+b[1] => sumador_restador:inst4.b[1]
+b[1] => inst7.IN0
+b[2] => sumador_restador:inst4.b[2]
+b[2] => inst6.IN0
+PAUSA <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CONTINUAR => ~NO_FANOUT~
+RECARGAR => ~NO_FANOUT~
+START => ~NO_FANOUT~
+
+
+|TpIntegrador|comparador12bits:inst1
+AeqB <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => comparador4bits:inst2.A[0]
+A[1] => comparador4bits:inst2.A[1]
+A[2] => comparador4bits:inst2.A[2]
+A[3] => comparador4bits:inst2.A[3]
+A[4] => comparador4bits:inst1.A[0]
+A[5] => comparador4bits:inst1.A[1]
+A[6] => comparador4bits:inst1.A[2]
+A[7] => comparador4bits:inst1.A[3]
+A[8] => comparador4bits:inst.A[0]
+A[9] => comparador4bits:inst.A[1]
+A[10] => comparador4bits:inst.A[2]
+A[11] => comparador4bits:inst.A[3]
+B[0] => comparador4bits:inst2.B[0]
+B[1] => comparador4bits:inst2.B[1]
+B[2] => comparador4bits:inst2.B[2]
+B[3] => comparador4bits:inst2.B[3]
+B[4] => comparador4bits:inst1.B[0]
+B[5] => comparador4bits:inst1.B[1]
+B[6] => comparador4bits:inst1.B[2]
+B[7] => comparador4bits:inst1.B[3]
+B[8] => comparador4bits:inst.B[0]
+B[9] => comparador4bits:inst.B[1]
+B[10] => comparador4bits:inst.B[2]
+B[11] => comparador4bits:inst.B[3]
+AgtB <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|comparador12bits:inst1|comparador4bits:inst
+AgtB <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst16.IN0
+A[0] => inst19.IN0
+A[0] => inst34.IN4
+A[1] => inst33.IN2
+A[1] => inst18.IN0
+A[1] => inst13.IN0
+A[2] => inst.IN0
+A[2] => inst32.IN1
+A[2] => inst12.IN0
+A[3] => inst10.IN0
+A[3] => inst5.IN0
+A[3] => inst11.IN0
+B[0] => inst9.IN0
+B[0] => inst19.IN1
+B[0] => inst37.IN3
+B[1] => inst8.IN0
+B[1] => inst18.IN1
+B[1] => inst36.IN3
+B[2] => inst.IN1
+B[2] => inst7.IN0
+B[2] => inst35.IN2
+B[3] => inst6.IN0
+B[3] => inst5.IN1
+B[3] => inst15.IN1
+AltB <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+AeqB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|comparador12bits:inst1|comparador4bits:inst1
+AgtB <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst16.IN0
+A[0] => inst19.IN0
+A[0] => inst34.IN4
+A[1] => inst33.IN2
+A[1] => inst18.IN0
+A[1] => inst13.IN0
+A[2] => inst.IN0
+A[2] => inst32.IN1
+A[2] => inst12.IN0
+A[3] => inst10.IN0
+A[3] => inst5.IN0
+A[3] => inst11.IN0
+B[0] => inst9.IN0
+B[0] => inst19.IN1
+B[0] => inst37.IN3
+B[1] => inst8.IN0
+B[1] => inst18.IN1
+B[1] => inst36.IN3
+B[2] => inst.IN1
+B[2] => inst7.IN0
+B[2] => inst35.IN2
+B[3] => inst6.IN0
+B[3] => inst5.IN1
+B[3] => inst15.IN1
+AltB <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+AeqB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|comparador12bits:inst1|comparador4bits:inst2
+AgtB <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => inst16.IN0
+A[0] => inst19.IN0
+A[0] => inst34.IN4
+A[1] => inst33.IN2
+A[1] => inst18.IN0
+A[1] => inst13.IN0
+A[2] => inst.IN0
+A[2] => inst32.IN1
+A[2] => inst12.IN0
+A[3] => inst10.IN0
+A[3] => inst5.IN0
+A[3] => inst11.IN0
+B[0] => inst9.IN0
+B[0] => inst19.IN1
+B[0] => inst37.IN3
+B[1] => inst8.IN0
+B[1] => inst18.IN1
+B[1] => inst36.IN3
+B[2] => inst.IN1
+B[2] => inst7.IN0
+B[2] => inst35.IN2
+B[3] => inst6.IN0
+B[3] => inst5.IN1
+B[3] => inst15.IN1
+AltB <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+AeqB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|reg_inicial:inst2
+Q[0] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst12.CLK
+CLOCK => inst13.CLK
+CLOCK => inst23.CLK
+CLOCK => inst24.CLK
+CLOCK => inst25.CLK
+CLOCK => inst26.CLK
+CLOCK => inst27.CLK
+CLOCK => inst28.CLK
+CLOCK => inst14.CLK
+CLOCK => inst8.CLK
+CLOCK => inst10.CLK
+CLOCK => inst11.CLK
+DATA[0] => mux2:inst21.B
+DATA[1] => mux2:inst9.B
+DATA[2] => mux2:inst15.B
+DATA[3] => mux2:inst16.B
+DATA[4] => mux2:inst17.B
+DATA[5] => mux2:inst18.B
+DATA[6] => mux2:inst19.B
+DATA[7] => mux2:inst20.B
+DATA[8] => mux2:inst22.B
+DATA[9] => mux2:inst29.B
+DATA[10] => mux2:inst30.B
+DATA[11] => mux2:inst31.B
+LOAD_I => mux2:inst16.E
+LOAD_I => mux2:inst17.E
+LOAD_I => mux2:inst19.E
+LOAD_I => mux2:inst20.E
+LOAD_I => mux2:inst22.E
+LOAD_I => mux2:inst29.E
+LOAD_I => mux2:inst30.E
+LOAD_I => mux2:inst31.E
+LOAD_I => mux2:inst18.E
+LOAD_I => mux2:inst21.E
+LOAD_I => mux2:inst9.E
+LOAD_I => mux2:inst15.E
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst16
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst17
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst19
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst20
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst22
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst29
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst30
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst31
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst18
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst21
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst9
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_inicial:inst2|mux2:inst15
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst
+Q[0] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst12.CLK
+CLOCK => inst13.CLK
+CLOCK => inst23.CLK
+CLOCK => inst24.CLK
+CLOCK => inst25.CLK
+CLOCK => inst26.CLK
+CLOCK => inst27.CLK
+CLOCK => inst28.CLK
+CLOCK => inst14.CLK
+CLOCK => inst8.CLK
+CLOCK => inst10.CLK
+CLOCK => inst11.CLK
+DATA[0] => mux2:inst21.B
+DATA[1] => mux2:inst9.B
+DATA[2] => mux2:inst15.B
+DATA[3] => mux2:inst16.B
+DATA[4] => mux2:inst17.B
+DATA[5] => mux2:inst18.B
+DATA[6] => mux2:inst19.B
+DATA[7] => mux2:inst20.B
+DATA[8] => mux2:inst22.B
+DATA[9] => mux2:inst29.B
+DATA[10] => mux2:inst30.B
+DATA[11] => mux2:inst31.B
+LOAD_F => mux2:inst16.E
+LOAD_F => mux2:inst17.E
+LOAD_F => mux2:inst19.E
+LOAD_F => mux2:inst20.E
+LOAD_F => mux2:inst22.E
+LOAD_F => mux2:inst29.E
+LOAD_F => mux2:inst30.E
+LOAD_F => mux2:inst31.E
+LOAD_F => mux2:inst18.E
+LOAD_F => mux2:inst21.E
+LOAD_F => mux2:inst9.E
+LOAD_F => mux2:inst15.E
+
+
+|TpIntegrador|reg_final:inst|mux2:inst16
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst17
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst19
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst20
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst22
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst29
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst30
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst31
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst18
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst21
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst9
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst|mux2:inst15
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|detectorFlancoSubida:inst21
+S <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst18.CLK
+A => inst18.DATAIN
+A => inst19.IN1
+
+
+|TpIntegrador|comparador_igualdad:inst9
+IGUALDAD <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+Qc[0] => inst.IN0
+Qc[1] => inst5.IN0
+Qc[2] => inst6.IN0
+Qc[3] => inst7.IN0
+Qc[4] => inst8.IN0
+Qc[5] => inst9.IN0
+Qc[6] => inst10.IN0
+Qc[7] => inst11.IN0
+Qc[8] => inst12.IN0
+Qc[9] => inst13.IN0
+Qc[10] => inst14.IN0
+Qc[11] => inst15.IN0
+Qf[0] => inst.IN1
+Qf[1] => inst5.IN1
+Qf[2] => inst6.IN1
+Qf[3] => inst7.IN1
+Qf[4] => inst8.IN1
+Qf[5] => inst9.IN1
+Qf[6] => inst10.IN1
+Qf[7] => inst11.IN1
+Qf[8] => inst12.IN1
+Qf[9] => inst13.IN1
+Qf[10] => inst14.IN1
+Qf[11] => inst15.IN1
+
+
+|TpIntegrador|reg_contador:inst3
+Q[0] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst12.CLK
+CLOCK => inst13.CLK
+CLOCK => inst23.CLK
+CLOCK => inst24.CLK
+CLOCK => inst25.CLK
+CLOCK => inst26.CLK
+CLOCK => inst27.CLK
+CLOCK => inst28.CLK
+CLOCK => inst14.CLK
+CLOCK => inst8.CLK
+CLOCK => inst10.CLK
+CLOCK => inst11.CLK
+SUM[0] => mux2:inst21.A
+SUM[1] => mux2:inst7.A
+SUM[2] => mux2:inst9.A
+SUM[3] => mux2:inst15.A
+SUM[4] => mux2:inst16.A
+SUM[5] => mux2:inst17.A
+SUM[6] => mux2:inst18.A
+SUM[7] => mux2:inst19.A
+SUM[8] => mux2:inst20.A
+SUM[9] => mux2:inst22.A
+SUM[10] => mux2:inst29.A
+SUM[11] => mux2:inst30.A
+DATA[0] => mux2:inst21.B
+DATA[1] => mux2:inst7.B
+DATA[2] => mux2:inst9.B
+DATA[3] => mux2:inst15.B
+DATA[4] => mux2:inst16.B
+DATA[5] => mux2:inst17.B
+DATA[6] => mux2:inst18.B
+DATA[7] => mux2:inst19.B
+DATA[8] => mux2:inst20.B
+DATA[9] => mux2:inst22.B
+DATA[10] => mux2:inst29.B
+DATA[11] => mux2:inst30.B
+LOAD_I => mux2:inst15.E
+LOAD_I => mux2:inst16.E
+LOAD_I => mux2:inst18.E
+LOAD_I => mux2:inst19.E
+LOAD_I => mux2:inst20.E
+LOAD_I => mux2:inst22.E
+LOAD_I => mux2:inst29.E
+LOAD_I => mux2:inst30.E
+LOAD_I => mux2:inst17.E
+LOAD_I => mux2:inst21.E
+LOAD_I => mux2:inst7.E
+LOAD_I => mux2:inst9.E
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst15
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst16
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst18
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst19
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst20
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst22
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst29
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst30
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst17
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst21
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst7
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_contador:inst3|mux2:inst9
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|sumador_restador:inst4
+Cout <= sumador12bits:inst13.Cout
+UP_DOWN => sumador12bits:inst13.Cin
+UP_DOWN => inst.IN0
+UP_DOWN => inst1.IN0
+UP_DOWN => inst2.IN0
+UP_DOWN => inst3.IN0
+UP_DOWN => inst4.IN0
+UP_DOWN => inst5.IN0
+UP_DOWN => inst6.IN0
+UP_DOWN => inst7.IN0
+UP_DOWN => inst8.IN0
+UP_DOWN => inst9.IN0
+UP_DOWN => inst10.IN0
+UP_DOWN => inst11.IN0
+A[0] => sumador12bits:inst13.A[0]
+A[1] => sumador12bits:inst13.A[1]
+A[2] => sumador12bits:inst13.A[2]
+A[3] => sumador12bits:inst13.A[3]
+A[4] => sumador12bits:inst13.A[4]
+A[5] => sumador12bits:inst13.A[5]
+A[6] => sumador12bits:inst13.A[6]
+A[7] => sumador12bits:inst13.A[7]
+A[8] => sumador12bits:inst13.A[8]
+A[9] => sumador12bits:inst13.A[9]
+A[10] => sumador12bits:inst13.A[10]
+A[11] => sumador12bits:inst13.A[11]
+b[0] => inst.IN1
+b[1] => inst1.IN1
+b[2] => inst2.IN1
+S[0] <= sumador12bits:inst13.S[0]
+S[1] <= sumador12bits:inst13.S[1]
+S[2] <= sumador12bits:inst13.S[2]
+S[3] <= sumador12bits:inst13.S[3]
+S[4] <= sumador12bits:inst13.S[4]
+S[5] <= sumador12bits:inst13.S[5]
+S[6] <= sumador12bits:inst13.S[6]
+S[7] <= sumador12bits:inst13.S[7]
+S[8] <= sumador12bits:inst13.S[8]
+S[9] <= sumador12bits:inst13.S[9]
+S[10] <= sumador12bits:inst13.S[10]
+S[11] <= sumador12bits:inst13.S[11]
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13
+Cout <= FullAdder:inst17.Cout
+A[0] => FullAdder:inst.A
+A[1] => FullAdder:inst7.A
+A[2] => FullAdder:inst9.A
+A[3] => FullAdder:inst8.A
+A[4] => FullAdder:inst10.A
+A[5] => FullAdder:inst11.A
+A[6] => FullAdder:inst12.A
+A[7] => FullAdder:inst13.A
+A[8] => FullAdder:inst14.A
+A[9] => FullAdder:inst15.A
+A[10] => FullAdder:inst16.A
+A[11] => FullAdder:inst17.A
+B[0] => FullAdder:inst.B
+B[1] => FullAdder:inst7.B
+B[2] => FullAdder:inst9.B
+B[3] => FullAdder:inst8.B
+B[4] => FullAdder:inst10.B
+B[5] => FullAdder:inst11.B
+B[6] => FullAdder:inst12.B
+B[7] => FullAdder:inst13.B
+B[8] => FullAdder:inst14.B
+B[9] => FullAdder:inst15.B
+B[10] => FullAdder:inst16.B
+B[11] => FullAdder:inst17.B
+Cin => FullAdder:inst.Cin
+S[0] <= FullAdder:inst.S
+S[1] <= FullAdder:inst7.S
+S[2] <= FullAdder:inst9.S
+S[3] <= FullAdder:inst8.S
+S[4] <= FullAdder:inst10.S
+S[5] <= FullAdder:inst11.S
+S[6] <= FullAdder:inst12.S
+S[7] <= FullAdder:inst13.S
+S[8] <= FullAdder:inst14.S
+S[9] <= FullAdder:inst15.S
+S[10] <= FullAdder:inst16.S
+S[11] <= FullAdder:inst17.S
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst17|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst16
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst16|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst15
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst15|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst14
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst14|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst13
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst13|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst12
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst12|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst11
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst11|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst10
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst10|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst8
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst8|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst9
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst9|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst7
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst7|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst
+S <= XOR3:inst4.OUT
+Cin => XOR3:inst4.IN3
+Cin => inst1.IN1
+Cin => inst2.IN1
+A => XOR3:inst4.IN1
+A => inst1.IN0
+A => inst.IN0
+B => XOR3:inst4.IN2
+B => inst2.IN0
+B => inst.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TpIntegrador|sumador_restador:inst4|sumador12bits:inst13|FullAdder:inst|XOR3:inst4
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|TpIntegrador|reg_final:inst28
+Q[0] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst12.CLK
+CLOCK => inst13.CLK
+CLOCK => inst23.CLK
+CLOCK => inst24.CLK
+CLOCK => inst25.CLK
+CLOCK => inst26.CLK
+CLOCK => inst27.CLK
+CLOCK => inst28.CLK
+CLOCK => inst14.CLK
+CLOCK => inst8.CLK
+CLOCK => inst10.CLK
+CLOCK => inst11.CLK
+DATA[0] => mux2:inst21.B
+DATA[1] => mux2:inst9.B
+DATA[2] => mux2:inst15.B
+DATA[3] => mux2:inst16.B
+DATA[4] => mux2:inst17.B
+DATA[5] => mux2:inst18.B
+DATA[6] => mux2:inst19.B
+DATA[7] => mux2:inst20.B
+DATA[8] => mux2:inst22.B
+DATA[9] => mux2:inst29.B
+DATA[10] => mux2:inst30.B
+DATA[11] => mux2:inst31.B
+LOAD_F => mux2:inst16.E
+LOAD_F => mux2:inst17.E
+LOAD_F => mux2:inst19.E
+LOAD_F => mux2:inst20.E
+LOAD_F => mux2:inst22.E
+LOAD_F => mux2:inst29.E
+LOAD_F => mux2:inst30.E
+LOAD_F => mux2:inst31.E
+LOAD_F => mux2:inst18.E
+LOAD_F => mux2:inst21.E
+LOAD_F => mux2:inst9.E
+LOAD_F => mux2:inst15.E
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst16
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst17
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst19
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst20
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst22
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst29
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst30
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst31
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst18
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst21
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst9
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|reg_final:inst28|mux2:inst15
+S <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+B => inst11.IN0
+E => inst11.IN1
+E => inst15.IN0
+A => inst10.IN0
+
+
+|TpIntegrador|tristate_12bits:inst29
+DATA[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+DATA[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+DATA[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+DATA[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+DATA[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+DATA[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+DATA[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+DATA[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+DATA[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+DATA[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+DATA[10] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+DATA[11] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] => inst.DATAIN
+Q[1] => inst1.DATAIN
+Q[2] => inst2.DATAIN
+Q[3] => inst3.DATAIN
+Q[4] => inst4.DATAIN
+Q[5] => inst5.DATAIN
+Q[6] => inst6.DATAIN
+Q[7] => inst7.DATAIN
+Q[8] => inst8.DATAIN
+Q[9] => inst9.DATAIN
+Q[10] => inst10.DATAIN
+Q[11] => inst11.DATAIN
+Q_enable => inst.OE
+Q_enable => inst1.OE
+Q_enable => inst2.OE
+Q_enable => inst3.OE
+Q_enable => inst4.OE
+Q_enable => inst5.OE
+Q_enable => inst6.OE
+Q_enable => inst7.OE
+Q_enable => inst8.OE
+Q_enable => inst9.OE
+Q_enable => inst10.OE
+Q_enable => inst11.OE
+
+
